@@ -64,16 +64,29 @@ Algorithm:
 7.	Return 0
  
 Program:
+```
+#include<stdio.h> struct numbers
+{
+int a; int b;
+}n;
+int add(struct numbers n); int main()
+{
 
-//type your code here
+scanf("%d %d ",&n.a,&n.b);
+printf("%d",add(n));
+}
+int add(struct numbers n)
+{
+return n.a+n.b;
+}
 
 
 
-
+```
 Output:
 
+![image](https://github.com/user-attachments/assets/b12ba335-4d1f-4077-aa53-8ddd0cc2308f)
 
-//paste your output here
 
 
 
@@ -106,16 +119,23 @@ Use scanf to input the file name into the name array.
 5.	Return 0 to indicate successful program execution.
  
 Program:
+```
+#include <stdio.h> int main()
+{
+FILE *p;
+char name[30]; scanf("%s",name);
+printf("%s File Created Successfully",name); p=fopen("name","w");
+printf("\n%s File Opened",name); fclose(p);
+printf("\n%s File Closed",name);
+}
 
-//type your code here
 
 
-
-
+```
 Output:
 
+![image](https://github.com/user-attachments/assets/e740a9cb-8a77-471b-9293-3d975bca0010)
 
-//paste your output here
 
 
 
@@ -153,20 +173,25 @@ Use scanf to input the file name into the name array and the number of strings i
 5.	Return 0 to indicate successful program execution.
  
 Program:
+```
+#include <stdio.h> int main()
+{
+FILE *p;
+char name[20]; int num;
+char text[50]; scanf("%s%d",name,&num); p=fopen("name","w"); printf("%s Opened",name); for(int i=0;i<num;i++)
+{
+scanf("%s",text); fputs(text,p);
+}
+printf("\nData added Successfully");
 
-//type your code here
+}
 
 
 
-
+```
 Output:
 
-
-//paste your output here
-
-
-
-
+![image](https://github.com/user-attachments/assets/b92abc8f-3cc7-478f-93a0-735be033c57e)
 
 
 Result:
@@ -207,16 +232,46 @@ Algorithm:
 13.End the program by returning 0.
 
 Program:
+```
+#include <stdio.h>
+#include <stdlib.h>
+struct Subject
+{
+    char name[20];
+    int marks;
+};
+int main()
+{
+    int i,n;
+    scanf("%d",&n);
+    struct Subject *s = (struct Subject *)malloc(n*sizeof(struct Subject));
+    if(s==NULL)
+    {
+        printf("Memory Alocation Failed\n");
+        return 1;
+    }
+    for(i=0;i<n;i++)
+    {
+        scanf("%s %d",s[i].name,&s[i].marks);
+    }
+    for(i=0;i<n;i++)
+    {
+        printf("%s  %d\n",s[i].name,s[i].marks);
+    }
+    
+    free (s);
+    
+    return 0;
+}
 
-//type your code here
 
 
 
-
+```
 Output:
 
+![Uploading image.png…]()
 
-//paste your output here
 
 
 
