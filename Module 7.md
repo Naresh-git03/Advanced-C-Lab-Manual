@@ -269,8 +269,8 @@ int main()
 
 ```
 Output:
+![image](https://github.com/user-attachments/assets/802979b7-a920-413e-bea9-2dba748ea6e5)
 
-![Uploading image.png…]()
 
 
 
